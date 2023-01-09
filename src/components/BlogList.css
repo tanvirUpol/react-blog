@@ -1,0 +1,92 @@
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+  .blog-list  .card {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .blog-list  .card:hover {
+    transform: translateY(-5px)
+  }
+  .title{
+    color: rgb(15, 15, 15);
+    font-size: 32px;
+
+    margin-bottom: 6px;
+  }
+ 
+  .blog-list  .card div {
+    color: rgb(59, 59, 59);
+    font-size: 0.7em;
+    margin: 20px 0;
+    line-height: 1.5em;
+  }
+  .blog-list  .card a {
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    /* background: #e2e2e2; */
+    font-size: 0.9em;
+    text-align: center;
+    width: 120px;
+    padding: 8px;
+    border-radius: 4px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+.btns{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 300px;
+}
+
+.btns .btn-read{
+  border: 2px #32ae70 solid;
+}
+
+.btns .btn-delete{
+  border: 2px #ae3232 solid;
+}
+
+
+.btns .btn-read:hover{
+  background-color: #32ae70;
+  color: #fff;
+}
+
+.btns .btn-delete:hover{
+  background-color: #ae3232;
+  color: #fff;
+}
+
+.tags{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 16px;
+  display: flex;
+  gap: 5px;
+  
+  
+}
+
+.tags li{
+  background-color: #32ae70;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 5px;
+}
+
