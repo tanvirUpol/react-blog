@@ -1,4 +1,5 @@
-
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import { useTheme } from '../hooks/useTheme';
 import {Link} from 'react-router-dom'
 import { projectFirestore } from '../firebase/config'
 
@@ -6,6 +7,7 @@ import { projectFirestore } from '../firebase/config'
 import './BlogList.css'
 
 const BlogList = ({blogs}) => {
+  const {color} = useTheme()
  
   if(blogs.length === 0){
       
@@ -24,12 +26,12 @@ const BlogList = ({blogs}) => {
           <h3 className='title'>{blog.title}</h3>
           <ul className='tags'>
                 {blog.ingredients.map(ing =>(
-                    <li key={ing}>{ing}</li>
+                    <li key={ing} style={{background: color}} >{ing}</li>
                 ))}
           </ul>
           <div>{blog.method.substring(0, 100)}...</div>
           <div className='btns'>
-            <Link className='btn-read' to={`/blog/${blog.id}`}>Read More</Link>
+            <Link className='btn-read'  to={`/blog/${blog.id}`}>Read More</Link>
             <a className='btn-delete' onClick={() => handleClick(blog.id)}>Delete</a>
           </div>
           

@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 
 //styles
 import './App.css'
+import ThemeSelector from './components/ThemeSelector';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Navbar></Navbar>
+      <ThemeSelector></ThemeSelector>
         <Switch>
           <Route exact path="/">
             <Home></Home>

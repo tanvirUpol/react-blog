@@ -11,18 +11,16 @@ const Create = () => {
 
     const [title,setTitle] = useState('')
     const [method,setMethod] = useState('')
-    const [cookingTime,setCookingTime] = useState('')
     const [newIngredient,setNewIngredient] = useState('')
     const [ingredients,setIngredient] = useState([])
     const ingredientInput = useRef(null)
     const history = useHistory()
 
-    // const {postData,data} = useFetch('http://localhost:8000/recipes','POST')
 
 
     const handleSubmit = async (e)=>{
         e.preventDefault()
-       const doc =({title,ingredients,method,cookingTime: cookingTime + 'minutes' })
+       const doc =({title,ingredients,method})
 
        try{
             await projectFirestore.collection('recipes').add(doc)
@@ -86,15 +84,7 @@ const Create = () => {
                     />
                 </label>
 
-                {/* <label>
-                    <span>Cooking Time (minutes):</span>
-                    <input 
-                        type="number" 
-                        onChange={(e)=>setCookingTime(e.target.value)}
-                        value={cookingTime}
-                        required
-                    />
-                </label> */}
+     
 
                 <button className='btn submit-btn'>submit</button>
            </form>

@@ -18,7 +18,7 @@ const Home = () => {
         setIsPending(true)
 
       const unsub =  projectFirestore.collection('recipes').onSnapshot((snapshot)=>{
-            console.log(snapshot);
+            // console.log(snapshot);
             if(snapshot.empty){
                 setError('Nothing to Load')
                 setIsPending(false)
